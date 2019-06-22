@@ -1,0 +1,181 @@
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+body, 
+html {
+	width: 100%;
+	height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@keyframes cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+@keyframes typing {
+  from {
+    width: 100%;
+  }
+  90%, to {
+    width: 0;
+  }
+}
+@keyframes slide {
+  33.33333% {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+  to {
+    font-size: 0;
+    letter-spacing: 0;
+  }
+}
+
+.typing-slider {
+  font-family: 'Roboto', sans-serif;
+  /*white-space: nowrap;*/
+  color: #fff;
+}
+.typing-slider p {
+  position: relative;
+  display: inline;
+  font-size: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  -webkit-animation: slide 15s step-start infinite;
+  -ms-animation: slide 15s step-start infinite;
+}
+.typing-slider p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 3px solid black;
+  -webkit-animation: typing 5s infinite, cursor 1s infinite;
+  -ms-animation: typing 5s infinite, cursor 1s infinite;
+}
+.typing-slider p:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+}
+.typing-slider p:nth-child(1)::after {
+  -webkit-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -webkit-animation-timing-function: steps(16), step-end;
+  -ms-animation-timing-function: steps(16), step-end;
+}
+.typing-slider p:nth-child(2) {
+  -webkit-animation-delay: 5s;
+  -ms-animation-delay: 5s;
+}
+.typing-slider p:nth-child(2)::after {
+  -webkit-animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  -webkit-animation-timing-function: steps(23), step-end;
+  -ms-animation-timing-function: steps(23), step-end;
+}
+.typing-slider p:nth-child(3) {
+  -webkit-animation-delay: 10s;
+  -ms-animation-delay: 10s;
+}
+.typing-slider p:nth-child(3)::after {
+  -webkit-animation-delay: 10s;
+  -ms-animation-delay: 10s;
+  -webkit-animation-timing-function: steps(12), step-end;
+  -ms-animation-timing-function: steps(12), step-end;
+}
+
+
+
+
+div#main {
+	width: 100%;
+	height: 100%;
+}
+
+h1.display-4 {
+  margin-top: 100px;
+}
+
+
+a:hover {
+  color: #ffc418;
+}
+
+
+
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+
+img.vcelar {
+  margin-left: 100px;
+}
+
+.jumbotron h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media  screen and (min-width: 768px) { 
+
+img.fotka {
+  margin-left: -50px;
+}
+
+}
+
+@media screen and(min-width: 414px) {
+
+  img.vcelar {
+    position: relative;
+    left: -400px;
+  }
+}
