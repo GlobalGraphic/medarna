@@ -11,13 +11,12 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-
 @keyframes cursor {
   from, to {
     border-color: transparent;
   }
   50% {
-    border-color: black;
+    border-color: none;
   }
 }
 @keyframes typing {
@@ -38,7 +37,6 @@ html {
     letter-spacing: 0;
   }
 }
-
 .typing-slider {
   font-family: 'Roboto', sans-serif;
   /*white-space: nowrap;*/

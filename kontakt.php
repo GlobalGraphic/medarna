@@ -70,6 +70,9 @@ include_once "phpmailer/SMTP.php";*/
       <li class="nav-item">
         <a class="nav-link" href="kontakt.php">Kontakt</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="blog/blog.php">Blog</a>
+      </li>
     </ul>
   </div>  
 </nav>
